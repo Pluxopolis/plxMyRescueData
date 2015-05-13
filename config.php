@@ -21,14 +21,11 @@ $timeout = empty($params['timeout']) ? '10' : $params['timeout']['value'];
 
 ?>
 
-<h2><?php echo $plxPlugin->getInfo('title') ?></h2>
-<h3><?php $plxPlugin->lang('DESCRIPTION') ?></h3>
-
 <form action="parametres_plugin.php?p=plxMyRescueData" method="post" id="form_autosave">
 	<fieldset>
 		<p class="field"><label for="timeout"><?php $plxPlugin->lang('TIMEOUT') ?></label></p>
 		<?php plxUtils::printInput('timeout', $timeout, 'text', '2-2'); ?>
-		<p>
+		<p class="in-action-bar">
 			<?php echo plxToken::getTokenPostMethod() ?>
 			<input type="submit" name="save" value="<?php $plxPlugin->lang('L_SAVE') ?>" />
 		</p>
